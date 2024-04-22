@@ -12,11 +12,11 @@ ms.custom: e2e-hybrid, think-tank, e2e-arc-enabled-vmware-vsphere
 
 Azure Arc-enabled VMware vSphere supports on-premises and other cloud environments that are integrated with different identity and access management systems. In addition to existing VMware vCenter role-based access control (RBAC), Azure Arc-enabled VMware vSphere supports Azure RBAC to unify access management across VMware vCenter and minimize operational overhead.
 
-The combination RBAC models your organization should use depends on what usage needs your organization has. Some examples are:
+The combination RBAC models your organization should depend on what usage needs your organization has. Some examples are:
 
 - Onboarding a VMware vCenter to Azure Arc
 - Register and manage Virtual Machines of an Arc-enabled VMware vCenter
-- Deploy guest management (Arc agent) and extensions (Azure Policy, Azure Monitor, etc.) on an Arc-enabled VMware vCenter virtual machines.
+- Deploy guest management (Arc agent) and extensions (Azure Policy, Azure Monitor, etc.) on Arc-enabled VMware vSphere virtual machines.
 - Deploy new VMware virtual machines on an Arc-enabled VMware vCenter
 - Using Azure RBAC to access Azure resources
 
@@ -26,7 +26,7 @@ This article describes Azure Arc-enabled VMware vSphere identity and access mana
 
 ## Architecture
 
-To design the right architecture for your organization, you need to understand [Azure Arc resource bridge](/azure/azure-arc/resource-bridge/overview) and [Azure Arc Custom Location](/azure/azure-arc/platform/conceptual-custom-locations) help to extend Azure Arc capabilities over On Premises or third party hosting locations.
+To design the right architecture for your organization, you need to understand [Azure Arc resource bridge](/azure/azure-arc/resource-bridge/overview) and [Azure Arc Custom Location](/azure/azure-arc/platform/conceptual-custom-locations) which help to extend Azure Arc capabilities over on-premises or third party hosting locations.
 
 ### Azure RBAC on Azure Arc-enabled VMware vSphere
 
@@ -42,7 +42,8 @@ The following diagram displays [Azure Arc-enabled VMware vSphere access from any
 
 ## Design considerations
 
-Review the [identity and access management design area](../../../ready/landing-zone/design-area/identity-access.md) of Azure landing zones to assess the effect of Azure Arc-enabled VMware vSphere on your overall identity and access model.
+Review the [identity and access management design area](../../../ready/landing-zone/design-area/identity-access.md) of Azure landing zones and [identity and access management design area](../../../scenarios/hybrid/arc-enabled-servers
+/eslz-identity-and-access-management.md) of Azure Arc-enabled servers to assess the effect of Azure Arc-enabled VMware vSphere on your overall identity and access model.
 
 **For VMware vCenter onboarding:**
 
