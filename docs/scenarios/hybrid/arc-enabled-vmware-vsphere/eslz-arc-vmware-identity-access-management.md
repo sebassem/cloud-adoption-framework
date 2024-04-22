@@ -49,16 +49,16 @@ Review the [identity and access management design area](../../../ready/landing-z
 
 <!-- TODO: Check hyperlink when the appropriate documentation is created. -->
 - Decide between Microsoft Entra user (for manual onboarding of single vCenter) vs service principal (for scripted and headless onboarding of multiple vCenters) for onboarding VMware vCenters to Azure Arc individually or at scale. For more implementation details, refer to the [Automation disciplines critical design area](./eslz-arc-vmware-automation-disciplines.md).
-  - If you chose a service principal, create a service principal and assign the appropriate Azure RBAC role (*Azure Arc VMware Private Clouds Onboarding*) to the service principal.
-- It is recommended to use an external identity source like Microsoft Active Directory Domain Services (AD DS) or LDAPS server to manage identities at vCenter level.
-- [Microsoft Active Directory Domain Services (AD DS) synchronization with Microsoft Entra ID](/entra/identity/domain-services/synchronization) can help to reduce the bridge between on-premises and Azure identities.
-- Create a specific vCenter RBAC role with [appropriate permissions](/azure/azure-arc/resource-bridge/troubleshoot-resource-bridge#insufficient-permissions) for Azure Arc-enabled VMware vSphere appliance.
-- Create a dedicated service account and [assign the specific role to the service account](/azure/azure-arc/vmware-vsphere/support-matrix-for-arc-enabled-vmware-vsphere#required-vsphere-account-privileges) at vCenter root level.
+  - If you chose a service principal, create a service principal and assign the appropriate Azure RBAC role (*Azure Arc VMware Private Clouds Onboarding*) to the service principal. [This should go into recommendations]
+- It is recommended to use an external identity source like Microsoft Active Directory Domain Services (AD DS) or LDAPS server to manage identities at vCenter level. [This should go into recommendations, we can discuss if we should have this recommendation or not since its on the VMware level]
+- [Microsoft Active Directory Domain Services (AD DS) synchronization with Microsoft Entra ID](/entra/identity/domain-services/synchronization) can help to reduce the bridge between on-premises and Azure identities. [we can discuss if we should have this recommendation or not since its on the VMware level]
+- Create a specific vCenter RBAC role with [appropriate permissions](/azure/azure-arc/resource-bridge/troubleshoot-resource-bridge#insufficient-permissions) for Azure Arc-enabled VMware vSphere appliance. [This should be a recommendation]
+- Create a dedicated service account and [assign the specific role to the service account](/azure/azure-arc/vmware-vsphere/support-matrix-for-arc-enabled-vmware-vsphere#required-vsphere-account-privileges) at vCenter root level. [This should be a recommendation]
 
 
 **For VMware vCenter management:**
 
-- As Azure Arc-enabled VMware vSphere brings Microsoft Entra authentication and Azure RBAC to on-premises or other vCenter  environments, you must decide between existing vCenter access management and [Azure RBAC](/azure/role-based-access-control/overview), depending on your organization's security and governance requirements.
+- As Azure Arc-enabled VMware vSphere brings Microsoft Entra authentication and Azure RBAC to on-premises or other vCenter environments, you must decide between existing vCenter access management and [Azure RBAC](/azure/role-based-access-control/overview), depending on your organization's security and governance requirements.
 - Determine if Azure Arc-enabled VMware vSphere gives you the flexibility to [perform administration of VMware vCenter](/azure/azure-arc/vmware-vsphere/administer-arc-vmware) without your inbound firewall ports being open to your on-premises or other cloud networks.
 - Determine if Azure RBAC is the right choice when you have many VMware vCenters running in on-premises and other cloud environments and you need to simplify identity administration across all VMware vCenters.
 
